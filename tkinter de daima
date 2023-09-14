@@ -1,0 +1,44 @@
+import tkinter as tk  
+  
+# 创建主窗口  
+root = tk.Tk()  
+root.title("洛谷前五十道题")  
+  
+# 添加筛选条件控件  
+label1 = tk.Label(root, text="筛选条件")  
+label1.pack()  
+var1 = tk.StringVar()  
+var1.set("难度")  
+option1 = tk.OptionMenu(root, var1, "难度", "关键词", "算法")  
+option1.pack()  
+  
+# 添加难度控件  
+label2 = tk.Label(root, text="难度")  
+label2.pack()  
+var2 = tk.StringVar()  
+var2.set("全部")  
+option2 = tk.OptionMenu(root, var2, "全部", "简单", "中等", "困难")  
+option2.pack()  
+  
+# 添加关键词控件  
+label3 = tk.Label(root, text="关键词")  
+label3.pack()  
+var3 = tk.StringVar()  
+var3.set("")  
+entry3 = tk.Entry(root, textvariable=var3)  
+entry3.pack()  
+  
+# 添加算法控件  
+label4 = tk.Label(root, text="算法")  
+label4.pack()  
+var4 = tk.StringVar()  
+var4.set("")  
+entry4 = tk.Entry(root, textvariable=var4)  
+entry4.pack()  
+  
+# 添加查看按钮  
+button = tk.Button(root, text="查看题目", command=lambda: print("洛谷前五十道题"))  
+button.pack()  
+  
+# 运行GUI程序，查看效果  
+root.mainloop()
